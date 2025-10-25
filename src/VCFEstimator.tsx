@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -403,7 +403,7 @@ export default function VCFEstimator() {
   }
 
   useEffect(() => {
-    if (typeof window !== "undefined" && process.env.NODE_ENV !== "production") {
+  if (typeof window !== "undefined" && import.meta.env.MODE !== "production") {
       runDevTests();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
