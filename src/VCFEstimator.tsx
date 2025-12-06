@@ -26,25 +26,25 @@ import { Switch } from "@/components/ui/switch";
 
 // Default NY effective tax rates (demo). Users can override.
 const NY_EFFECTIVE_TAX_TABLE = [
-  { income: 10000, rate: 0.1482 },
-  { income: 20000, rate: 0.1481 },
-  { income: 25000, rate: 0.1479 },
-  { income: 30000, rate: 0.1386 },
-  { income: 35000, rate: 0.1293 },
-  { income: 40000, rate: 0.1345 },
-  { income: 45000, rate: 0.1396 },
-  { income: 50000, rate: 0.1474 },
-  { income: 60000, rate: 0.1551 },
-  { income: 70000, rate: 0.1629 },
-  { income: 80000, rate: 0.1706 },
-  { income: 90000, rate: 0.1864 },
-  { income: 100000, rate: 0.2021 },
-  { income: 125000, rate: 0.2180 },
-  { income: 150000, rate: 0.2338 },
-  { income: 175000, rate: 0.2497 },
-  { income: 200000, rate: 0.2655 },
-  { income: 225000, rate: 0.3017 },
-  { income: 350000, rate: 0.3378 },
+  { income: 10000, rate: 0.1239 },
+  { income: 20000, rate: 0.1283 },
+  { income: 25000, rate: 0.1327 },
+  { income: 30000, rate: 0.1303 },
+  { income: 35000, rate: 0.128 },
+  { income: 40000, rate: 0.1333 },
+  { income: 45000, rate: 0.1385 },
+  { income: 50000, rate: 0.1464 },
+  { income: 60000, rate: 0.1544 },
+  { income: 70000, rate: 0.1623 },
+  { income: 80000, rate: 0.1702 },
+  { income: 90000, rate: 0.1858 },
+  { income: 100000, rate: 0.2013 },
+  { income: 125000, rate: 0.2172 },
+  { income: 150000, rate: 0.2332 },
+  { income: 175000, rate: 0.2491 },
+  { income: 200000, rate: 0.2651 },
+  { income: 225000, rate: 0.3015 },
+  { income: 350000, rate: 0.3379 },
 ];
 
 /**
@@ -62,24 +62,24 @@ function interpolateTaxRate(income: number, table = NY_EFFECTIVE_TAX_TABLE) {
 // Personal consumption table (percent of income) keyed by pre-disability income
 // Columns: Single0 (A), Single1Plus (B), Married0 (C), Married1 (D), Married2Plus (E)
 const CONSUMPTION_TABLE = [
-  { income: 10000, Single0: 0.779, Single1Plus: 0.185, Married0: 0.370, Married1: 0.194, Married2Plus: 0.131 },
-  { income: 20000, Single0: 0.763, Single1Plus: 0.182, Married0: 0.344, Married1: 0.184, Married2Plus: 0.126 },
-  { income: 25000, Single0: 0.755, Single1Plus: 0.180, Married0: 0.330, Married1: 0.180, Married2Plus: 0.123 },
-  { income: 30000, Single0: 0.747, Single1Plus: 0.178, Married0: 0.317, Married1: 0.175, Married2Plus: 0.121 },
-  { income: 35000, Single0: 0.753, Single1Plus: 0.185, Married0: 0.290, Married1: 0.169, Married2Plus: 0.120 },
-  { income: 40000, Single0: 0.751, Single1Plus: 0.185, Married0: 0.258, Married1: 0.157, Married2Plus: 0.113 },
-  { income: 45000, Single0: 0.748, Single1Plus: 0.185, Married0: 0.226, Married1: 0.145, Married2Plus: 0.107 },
-  { income: 50000, Single0: 0.732, Single1Plus: 0.184, Married0: 0.219, Married1: 0.142, Married2Plus: 0.105 },
-  { income: 60000, Single0: 0.715, Single1Plus: 0.182, Married0: 0.211, Married1: 0.138, Married2Plus: 0.103 },
-  { income: 70000, Single0: 0.682, Single1Plus: 0.175, Married0: 0.189, Married1: 0.126, Married2Plus: 0.094 },
-  { income: 80000, Single0: 0.641, Single1Plus: 0.165, Married0: 0.172, Married1: 0.116, Married2Plus: 0.087 },
-  { income: 90000, Single0: 0.620, Single1Plus: 0.160, Married0: 0.164, Married1: 0.110, Married2Plus: 0.083 },
-  { income: 100000, Single0: 0.599, Single1Plus: 0.155, Married0: 0.155, Married1: 0.105, Married2Plus: 0.080 },
-  { income: 125000, Single0: 0.548, Single1Plus: 0.143, Married0: 0.143, Married1: 0.097, Married2Plus: 0.073 },
-  { income: 150000, Single0: 0.519, Single1Plus: 0.137, Married0: 0.132, Married1: 0.090, Married2Plus: 0.069 },
-  { income: 175000, Single0: 0.490, Single1Plus: 0.131, Married0: 0.120, Married1: 0.084, Married2Plus: 0.084 },
-  { income: 200000, Single0: 0.337, Single1Plus: 0.096, Married0: 0.100, Married1: 0.070, Married2Plus: 0.054 },
-  { income: 225000, Single0: 0.184, Single1Plus: 0.060, Married0: 0.081, Married1: 0.056, Married2Plus: 0.043 },
+  { income: 10000, Single0: 0.663, Single1Plus: 0.179, Married0: 0.390, Married1: 0.204, Married2Plus: 0.138 },
+  { income: 20000, Single0: 0.603, Single1Plus: 0.163, Married0: 0.37, Married1: 0.195, Married2Plus: 0.132 },
+  { income: 25000, Single0: 0.572, Single1Plus: 0.155, Married0: 0.36, Married1: 0.19, Married2Plus: 0.13 },
+  { income: 30000, Single0: 0.542, Single1Plus: 0.148, Married0: 0.351, Married1: 0.186, Married2Plus: 0.127 },
+  { income: 35000, Single0: 0.537, Single1Plus: 0.154, Married0: 0.319, Married1: 0.18, Married2Plus: 0.126 },
+  { income: 40000, Single0: 0.549, Single1Plus: 0.155, Married0: 0.272, Married1: 0.163, Married2Plus: 0.116 },
+  { income: 45000, Single0: 0.562, Single1Plus: 0.156, Married0: 0.225, Married1: 0.145, Married2Plus: 0.107 },
+  { income: 50000, Single0: 0.573, Single1Plus: 0.161, Married0: 0.222, Married1: 0.144, Married2Plus: 0.107 },
+  { income: 60000, Single0: 0.584, Single1Plus: 0.166, Married0: 0.218, Married1: 0.143, Married2Plus: 0.106 },
+  { income: 70000, Single0: 0.554, Single1Plus: 0.157, Married0: 0.194, Married1: 0.129, Married2Plus: 0.096 },
+  { income: 80000, Single0: 0.525, Single1Plus: 0.149, Married0: 0.176, Married1: 0.118, Married2Plus: 0.089 },
+  { income: 90000, Single0: 0.511, Single1Plus: 0.145, Married0: 0.167, Married1: 0.112, Married2Plus: 0.085 },
+  { income: 100000, Single0: 0.497, Single1Plus: 0.141, Married0: 0.158, Married1: 0.107, Married2Plus: 0.081 },
+  { income: 125000, Single0: 0.47, Single1Plus: 0.134, Married0: 0.147, Married1: 0.099, Married2Plus: 0.075 },
+  { income: 150000, Single0: 0.444, Single1Plus: 0.128, Married0: 0.135, Married1: 0.093, Married2Plus: 0.07 },
+  { income: 175000, Single0: 0.418, Single1Plus: 0.123, Married0: 0.123, Married1: 0.086, Married2Plus: 0.066 },
+  { income: 200000, Single0: 0.375, Single1Plus: 0.106, Married0: 0.104, Married1: 0.072, Married2Plus: 0.059 },
+  { income: 225000, Single0: 0.333, Single1Plus: 0.089, Married0: 0.085, Married1: 0.059, Married2Plus: 0.045 },
 ];
 
 /**
@@ -111,12 +111,12 @@ function getChildCountUnder23(ages: (number | "none")[], yearIndex: number): num
 
 // Age-specific nominal earnings growth (Table 3 excerpt; fallback 3% for 52+)
 const AGE_GROWTH: Record<number, number> = {
-  18: 0.09523, 19: 0.09364, 20: 0.09209, 21: 0.09057, 22: 0.08856, 23: 0.08655,
-  24: 0.08454, 25: 0.08253, 26: 0.08053, 27: 0.07853, 28: 0.07654, 29: 0.07455,
-  30: 0.07256, 31: 0.07058, 32: 0.0686, 33: 0.06663, 34: 0.06465, 35: 0.06269,
-  36: 0.06072, 37: 0.05876, 38: 0.0568, 39: 0.05484, 40: 0.0529, 41: 0.05095,
-  42: 0.04901, 43: 0.04707, 44: 0.04514, 45: 0.04321, 46: 0.04128, 47: 0.03935,
-  48: 0.03743, 49: 0.03551, 50: 0.0336, 51: 0.03169,
+  18: 0.09347, 19: 0.09179, 20: 0.09013, 21: 0.08852, 22: 0.08653, 23: 0.08455,
+  24: 0.08257, 25: 0.08060, 26: 0.07863, 27: 0.07666, 28: 0.07469, 29: 0.07273,
+  30: 0.07078, 31: 0.06882, 32: 0.06687, 33: 0.06493, 34: 0.06298, 35: 0.06104,
+  36: 0.05911, 37: 0.05717, 38: 0.05525, 39: 0.05332, 40: 0.0514, 41: 0.04948,
+  42: 0.04756, 43: 0.04565, 44: 0.04375, 45: 0.04184, 46: 0.03994, 47: 0.03804,
+  48: 0.03615, 49: 0.03426, 50: 0.03237, 51: 0.03049,
 };
 
 function ageGrowth(age: number, fallback = 0.03) {
@@ -124,9 +124,9 @@ function ageGrowth(age: number, fallback = 0.03) {
 }
 
 function discountRateAfterTaxForAge(age: number) {
-  if (age <= 35) return 0.026; // Table 5 (≤35)
-  if (age <= 54) return 0.024; // 36–54
-  return 0.021; // 55+
+  if (age <= 35) return 0.027; // Table 5 (≤35)
+  if (age <= 54) return 0.025; // 36–54
+  return 0.022; // 55+
 }
 
 function currency(n: number) {
@@ -564,7 +564,7 @@ export default function VCFEstimator() {
               <span className="text-sm text-muted-foreground">Manual</span>
             </div>
             <Input type="number" step="0.0001" value={discountOverride==="auto" ? discountRateAfterTaxForAge(ageAtStart) : (discountOverride as number)} onChange={(e)=>setDiscountOverride(parseFloat(e.target.value||"0"))} />
-            <p className="text-xs text-muted-foreground">Auto picks 2.6% (≤35), 2.4% (36–54), 2.1% (55+)</p>
+            <p className="text-xs text-muted-foreground">Auto picks 2.7% (≤35), 2.5% (36–54), 2.2% (55+)</p>
           </div>
 
           <div className="md:col-span-3 border-t pt-4">
@@ -818,15 +818,15 @@ export default function VCFEstimator() {
                   <tbody>
                     <tr className="border-t">
                       <td className="py-2 pr-3">≤ 35</td>
-                      <td className="py-2 pr-3">2.60%</td>
+                      <td className="py-2 pr-3">2.70%</td>
                     </tr>
                     <tr className="border-t">
                       <td className="py-2 pr-3">36–54</td>
-                      <td className="py-2 pr-3">2.40%</td>
+                      <td className="py-2 pr-3">2.50%</td>
                     </tr>
                     <tr className="border-t">
                       <td className="py-2 pr-3">55+</td>
-                      <td className="py-2 pr-3">2.10%</td>
+                      <td className="py-2 pr-3">2.20%</td>
                     </tr>
                   </tbody>
                 </table>
