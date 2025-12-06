@@ -165,7 +165,7 @@ export default function VCFEstimator() {
   const [retirementPct, setRetirementPct] = useState(0.04);
 
   // Medical benefit settings
-  const [medicalBase, setMedicalBase] = useState(7280); // firm's baseline
+  const [medicalBase, setMedicalBase] = useState(7654.50); // firm's baseline
   const [medicalGrowth, setMedicalGrowth] = useState(0.023); // default CPI + medical (3.04%)
   const [medicalGrowthMode, setMedicalGrowthMode] = useState<MedicalGrowthMode>("cpi");
 
